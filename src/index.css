@@ -190,4 +190,8 @@ form h2 {
   .sidebar {
     order: 2;
   }
+
+  body {
+    margin: 0 2rem;
+  }
 }
