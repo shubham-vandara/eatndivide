@@ -61,29 +61,40 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <div className="sidebar">
-        <FriendList
-          friends={friend}
-          onSelection={handleSelection}
-          selectedFriend={selectedFriend}
-        />
+    <>
+      <Header />
+      <div className="app">
+        <div className="sidebar">
+          <FriendList
+            friends={friend}
+            onSelection={handleSelection}
+            selectedFriend={selectedFriend}
+          />
 
-        {/* IF SHOWADDFRIEND IS TRUE THEN FORMADDFRIEND COMPONENT IS SHOW */}
-        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
+          {/* IF SHOWADDFRIEND IS TRUE THEN FORMADDFRIEND COMPONENT IS SHOW */}
+          {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
 
-        <Button onClick={handleShowAddFriend}>
-          {!showAddFriend ? "Add Friend" : "Close"}
-        </Button>
+          <Button onClick={handleShowAddFriend}>
+            {!showAddFriend ? "Add Friend" : "Close"}
+          </Button>
+        </div>
+
+        {selectedFriend && (
+          <FormSplitBill
+            selectedFriend={selectedFriend}
+            onSplitBill={handleSplitBill}
+            key={selectedFriend.id}
+          />
+        )}
       </div>
+    </>
+  );
+}
 
-      {selectedFriend && (
-        <FormSplitBill
-          selectedFriend={selectedFriend}
-          onSplitBill={handleSplitBill}
-          key={selectedFriend.id}
-        />
-      )}
+function Header() {
+  return (
+    <div className="header">
+      <h1>Eat N Divide</h1>
     </div>
   );
 }

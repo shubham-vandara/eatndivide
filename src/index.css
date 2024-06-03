@@ -18,11 +18,20 @@ html {
 }
 
 body {
-  height: 100vh;
+  height: auto;
   color: #495057;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  background: var(--color-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
 
 .app {
@@ -94,7 +103,7 @@ body {
   grid-column: 3;
 }
 
-.sidebar > .button {
+.sidebar>.button {
   float: right;
   margin-right: 1.2rem;
 }
@@ -122,6 +131,7 @@ form {
   margin-bottom: 1.6rem;
   padding: 1.2rem;
 }
+
 .form-split-bill {
   grid-template-columns: 1fr 12rem;
   padding: 3.2rem 4rem;
@@ -166,4 +176,18 @@ form h2 {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   margin-bottom: 1.6rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 850px) {
+  .app {
+    grid-template-columns: unset;
+    row-gap: 2rem;
+    margin: 4rem 0;
+  }
+
+  .sidebar {
+    order: 2;
+  }
 }
