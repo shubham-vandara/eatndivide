@@ -34,25 +34,31 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Shubham-Vandara/EatNDivide.git
-   
+   git clone https://github.com/shubham-vandara/eatndivide.git
+
+   ```
 2. Navigate to the project directory:
    ```sh
-   cd EatNDivide
-   
+   cd eatndivide
+
+   ```
 3. Install NPM packages:
    ```sh
    npm install
+   ```
 
 ## Usage
 
 To run the application locally, execute the following command:
-  ```
-  npm start
-  ```
+
+```
+npm start
+```
+
 Visit **`http://localhost:3000`** in your browser to view the app.
 
 ## Contributing
+
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
@@ -64,5 +70,3 @@ Contributions are what make the open-source community such an amazing place to l
 ## Project Link
 
 https://eatndivide.netlify.app/
-
-
